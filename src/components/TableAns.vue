@@ -46,8 +46,7 @@
       async fetchData() {
         try {
           const response = await axios.get('http://127.0.0.1:5000/top_values');
-          console.log('Resposta da API:', response.data); // Verifique se a resposta tem a estrutura correta
-          this.data = response.data; // Certifique-se de que 'top_values' existe no seu 'data'
+          this.data = response.data;
         } catch (error) {
           console.error('Erro ao buscar dados:', error);
         } finally {
@@ -58,41 +57,7 @@
     }
   };
   </script>
-  
-  <style scoped>
-  table {
-    width: 100%;
-    margin-top: 20px;
-    border-collapse: collapse;
-  }
-  
-  th, td {
-    padding: 10px;
-    text-align: left;
-  }
-  
-  th {
-    background-color: #f2f2f2;
-  }
-  
-  tbody tr:nth-child(even) {
-    background-color: #f9f9f9;
-  }
-  .title{
-    margin-bottom: 10%;
-  }
-  .spinner {
-  border: 4px solid #f3f3f3; /* Cor de fundo do spinner */
-  border-top: 4px solid #3498db; /* Cor do topo do spinner */
-  border-radius: 50%;
-  width: 150px;
-  height: 150px;
-  animation: spin 2s linear infinite;
-  margin: 0 auto;
-}
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-  </style>
+  <style scoped src="./TableAns.css"></style>
+
+
   
